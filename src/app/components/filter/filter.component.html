@@ -1,0 +1,13 @@
+<section class="Filters">
+    <span>
+        <a class="icon-find"></a>
+        <input (keyup)="searching(search)" [(ngModel)]="search"  type="text" placeholder="Search">
+    </span>
+    <label for="filter" class="icon-control"></label>
+    <input class="d-none" type="checkbox" id="filter">
+    <div>
+        <label (click)="showOfferOnly()" class="text-end" for="offer">Show offers only
+            <input [(ngModel)]="offer" id="offer" type="checkbox" />
+        </label>
+    </div>
+</section>

@@ -1,0 +1,102 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+%box-shadow {
+    border-radius: 10px;
+    box-shadow   : #53535341 -1px 1px 5px;
+    color        : #53535365;
+}
+
+$gray      : #53535365;
+$grayM :  #535353a2;
+$dark-grey : #535353;
+$fontHel: Helvetica;
+.container {
+    overflow: hidden;
+
+    header {
+        margin        : 0 20px;
+        height        : 69px;
+        padding-bottom: 6px;
+
+        .Hi-Sanjeev {
+            width      : 100%;
+            font-family: $fontHel;
+            font-size  : 16px;
+            font-weight: 500;
+            color      : $dark-grey
+        }
+
+        .Sarjapur-Bangalore {
+            font-family: $fontHel;
+            font-size  : 14px;
+            font-weight: 500;
+            color      : #fba346;
+        }
+
+        .Sarjapur-Bangalore a {
+            font-size  : 7px;
+            font-weight: 500;
+            color      : #fba346;
+        }
+
+        span {
+            display         : block;
+            width           : 40px;
+            height          : 40px;
+            border-radius   : 50%;
+            background-color: #fba346;
+        }
+    }
+
+    .Best-Safety-Standard,
+    .Best-Safety-Standard a {
+        padding         : 5px 0;
+        text-align      : center;
+        font-family     : $fontHel;
+        font-size       : 14px;
+        font-weight     : 500;
+        letter-spacing  : 0.51px;
+        color           : #fff;
+        background-color: #fba346;
+    }
+
+    .Best-Safety-Standard a {
+        color       : #fff;
+        margin-right: 10px;
+    }
+
+    section:nth-of-type(1) {
+        margin: 24px 20px ;
+        ul {
+            width: max-content;
+            overflow-x: scroll; 
+            li{
+                float       : left;
+                margin-right: 10px;
+            }           
+        }
+    }
+    .scrollX{
+        overflow-x: scroll;
+    }
+
+    section:nth-of-type(2), section:nth-of-type(3) {
+        clear : left;
+        margin: 24px 20px;
+        ul {
+            
+            width: auto;
+            width: max-content;
+            li{
+                float       : left;
+                margin-right: 10px;
+            }  
+        }
+    }
+    .footerHeight{
+        height: 50px;
+    }
+}

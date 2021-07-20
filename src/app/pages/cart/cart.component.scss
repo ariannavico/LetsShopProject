@@ -1,0 +1,193 @@
+%box-shadow {
+    border-radius: 10px;
+    box-shadow   : #53535341 -1px 1px 5px;
+    color        : #53535365;
+}
+
+$gray      : #53535365;
+$grayM     : #535353a2;
+$dark-grey : #535353;
+$fontHel   : Helvetica;
+$orange    : #fba346;
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    header {
+        @extend %box-shadow;
+        border-radius  : 0;
+        height         : 69px;
+        display        : flex;
+        align-items    : flex-end;
+        justify-content: center;
+
+        h1 {
+            color      : $dark-grey;
+            padding    : 15px;
+            font-family: $fontHel;
+            font-size  : 16px;
+        }
+
+        a {
+            position: absolute;
+            top     : 35px;
+            left    : 20px;
+        }
+    }
+
+    section:first-of-type {
+        margin: 20px;
+
+        .Title-section {
+            div:nth-of-type(1) {
+                h1 {
+                    margin-bottom: 0;
+                }
+
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+            }
+
+            div:nth-of-type(2) {
+                display: flex;
+
+                h3:first-of-type {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        ul {
+            li {
+                border-bottom: 1px #53535331 solid;
+
+                span {
+                    display         : block;
+                    margin          : 10px;
+                    width           : 35px;
+                    height          : 35px;
+                    background-color: olive;
+                }
+
+                h1 {
+                    font-size: 16px;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    color    : $orange;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .Detail.product {
+                    text-align: left;
+                }
+
+                .Controler-quantity {
+                    align-items  : center;
+                    height       : 30px;
+                    width        : 85px;
+                    border       : 1px solid $orange;
+                    border-radius: 16px;
+                    padding      : 0 12px;
+
+                    h4,
+                    button {
+                        font-size: 12px;
+                        color    : $orange;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    section:nth-of-type(2) {
+        background-color: #53535331;
+        margin          : 20px;
+        border-radius   : 10px;
+        padding         : 10px;
+
+        h1,
+        p {
+            margin: 0;
+        }
+    }
+
+    section:nth-of-type(3) {
+        margin       : 20px;
+        border-radius: 10px;
+
+        h1 {
+            font-size    : 14px;
+            font-family  : $fontHel;
+            font-weight  : 600;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size  : 14px;
+            font-family: $fontHel;
+
+        }
+
+        .button-orange {
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .button-orange {
+        margin          : 0px auto;
+        width           : 240px;
+        height          : 50px;
+        background-color: $orange;
+        border-radius   : 100px;
+        color           : #fff;
+        padding         : 0 20px;
+
+        h1 {
+            font-size  : 14px;
+            font-family: $fontHel;
+            font-weight: 600;
+        }
+    }
+}
+
+aside {
+    text-align: center;
+    .button-orange {
+        h1 {
+            text-align: center;
+            width     : 100%;
+            color: #fff;
+        }
+    }
+    img {
+        display         : block;
+        margin          : 100px auto ;
+        width           : 100vw;
+    }
+    h1{
+        color: $dark-grey;
+    }
+    p{
+        width: 215px;
+        color: $gray;
+        margin: 16px auto 50px;
+    }
+
+}

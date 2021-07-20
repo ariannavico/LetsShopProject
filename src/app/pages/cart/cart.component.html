@@ -1,0 +1,71 @@
+<div class="container">
+    <header>
+        <h1>Cart</h1>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="icon-chevron-left"></a>
+    </header>
+    <article *ngIf="SharedService.cart.length > 0"> 
+        <section>
+            <div class="Title-section">
+                <div>
+                    <h1>More Mega Store</h1>
+                    <p>Bellandur</p>
+                </div>
+                <div>
+                    <h3>+</h3>
+                    <h3>Add Items</h3>
+                </div>
+            </div>
+            <ul>
+                <li *ngFor="let item of SharedService.cart" class="d-flex justify-content-between align-items-center">
+                    <div class="mb-2 mr-2 mt-2 w-50 Detail.product">
+                        <div>
+                            <h1>{{item.name}}</h1>
+                            <p>{{item.category}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between w-50">
+                        <h2>€ {{item.priceTotal}}</h2>
+                        <div class="d-flex justify-content-between Controler-quantity">
+                            <button (click)="SharedService.removeQuantity(item)">-</button>
+                            <h4>{{item.quantity}}</h4>
+                            <button (click)="SharedService.addQuantity(item)">+</button>
+                        </div>
+                    </div>
+                </li>
+        
+            </ul>
+        </section>
+        <section class="Title-section d-flex justify-content-between align-items-center">
+            <div >
+                <h1>Contct Free Delivery</h1>
+                <p>Please leave my order at the doorstep</p>
+            </div>
+            <button *ngIf="!SharedService.doorStep" (click)="leaveAtDoorStep(true)" class="icon-toggle-off"></button>
+            <button *ngIf="SharedService.doorStep" style="color:green" (click)="leaveAtDoorStep(false)" class="icon-toggle-on"></button>
+        </section>
+        <section >
+            <h1>Payment Details</h1>
+            <div class=" d-flex justify-content-between align-items-center">
+                <h2>Sub total</h2>
+                <h1>€ {{SharedService.subTotal}}</h1>
+            </div>
+            <div class=" d-flex justify-content-between align-items-center">
+                <h2>Tax</h2>
+                <h1>€ {{SharedService.taxCost}}</h1>
+            </div>
+           <button  class="button-orange d-flex justify-content-between align-items-center">
+               <h1>Checkout</h1>
+               <h1>€ {{SharedService.checkout}}</h1>
+           </button>
+        </section>
+    </article>
+    <aside *ngIf="SharedService.cart.length <= 0">
+        <img src="../../assets/Empty-cart.jpg">
+        <h1>No Items in the Cart</h1>
+        <p>Your cart is empty. Add some items to see it here        </p>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active"   class="button-orange d-flex justify-content-between align-items-center">
+            <h1>Add to Cart</h1>
+        </button>
+    </aside>
+    
+</div>

@@ -1,0 +1,20 @@
+<section [ngClass]="{colorCard: product.name === active}" >
+    <button  [routerLink]="['/product', product.name]" routerLinkActive="router-link-active" class="d-flex justify-content-start align-items-center">
+        <img src="" alt="">
+        <div class="text-start">
+            <h3>{{product.name}} </h3>
+            <p>{{product.category}} <a *ngIf="product.isGreen" style="color: green;" class="icon-green"></a></p>
+            <h1>€ {{product.price}}</h1>
+        </div>
+    </button>
+   
+    <div>
+        <button class="pulsante" *ngIf="product.isOffer">
+            <h3 >15%OFF</h3>
+        </button>
+        <button (click)="SharedService.addToCart(product)" class="pulsante">
+            <h3>+</h3>
+            <h3>Add</h3>
+        </button>
+    </div>
+</section>

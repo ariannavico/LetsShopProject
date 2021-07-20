@@ -1,0 +1,64 @@
+<div class="container">
+    <header class="d-flex justify-content-between align-items-end">
+        <div>
+            <h1 class="Hi-Sanjeev">Hi, Sanjeev</h1>
+            <h2 class="Sarjapur-Bangalore">Sarjapur, Bangalore <a class="icon-chevron-down"></a></h2>
+        </div>
+        <span></span>
+    </header>
+    <h1 class="Best-Safety-Standard"><a class="icon-shield"></a> Best Safety Standards amid Covid -19</h1>
+    <app-filter  (searchText)="showSearchText($event)" (showOffers)="showOffers($event)"></app-filter>
+    <section>
+        <button [routerLink]="['/category','' ]" routerLinkActive="router-link-active"  class="Title-section w-100">
+            <h1>Categories</h1>
+            <h3>View All</h3>
+        </button>
+        <div class="scrollX">
+            <ul>
+                <li >
+                    <button  [routerLink]="['/category/', 'All']" routerLinkActive="router-link-active" >
+                        <app-card-small [categoryName]="'All'"></app-card-small>
+                    </button>
+                </li>
+                <li *ngFor="let item of SharedService.categories">
+                    <button (click)="SharedService.currentCategory(item)" [routerLink]="['/category/', item]" routerLinkActive="router-link-active" >
+                        <app-card-small [categoryName]="item"></app-card-small>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <button (click)="SharedService.currentTypeProduct(false)" [routerLink]="['/category', 'Featured Products' ]" routerLinkActive="router-link-active" class="Title-section w-100">
+            <h1>Featured Products</h1>
+            <h3>View All</h3>
+        </button>
+        <div class="scrollX">
+            <ul>
+                <li *ngFor="let item of SharedService.data">
+                    <button (click)="SharedService.getCurrentProduct(item)" [routerLink]="['/Featured Products/', item.name]"
+                        routerLinkActive="router-link-active">
+                        <app-card-big *ngIf="!item.isGreen" [ProductName]="item.name"></app-card-big>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <button (click)="SharedService.currentTypeProduct(true)"  [routerLink]="['/category', 'Green Products']" routerLinkActive="router-link-active" class="Title-section w-100">
+            <h1>Green Products</h1>
+            <h3>View All</h3>
+        </button>
+        <div class="scrollX">
+            <ul>
+                <li *ngFor="let item of SharedService.data">
+                    <button (click)="SharedService.getCurrentProduct(item)" [routerLink]="['/Green Products/', item.name]"
+                        routerLinkActive="router-link-active">
+                        <app-card-big *ngIf="item.isGreen" [ProductName]="item.name"></app-card-big>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</div>

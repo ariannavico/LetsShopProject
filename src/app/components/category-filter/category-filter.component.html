@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li><button (click)="filterByCategory('All')" routerLinkActive="router-link-active">All</button></li>
+        <li *ngFor="let item of categoriesName">
+            <button (click)="filterByCategory(item)"  routerLinkActive="router-link-active">{{item}}</button>
+        </li>
+    </ul>
+</div>

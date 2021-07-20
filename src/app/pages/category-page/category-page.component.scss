@@ -1,0 +1,101 @@
+%box-shadow {
+    border-radius: 10px;
+    box-shadow   : #53535341 -1px 1px 5px;
+    color        : #53535365;
+}
+
+$gray      : #53535365;
+$grayM     : #535353a2;
+$dark-grey : #535353;
+$fontHel   : Helvetica;
+$orange    : #fba346;
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   button{
+       width: 25%;
+   }
+    
+}
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    header {
+        @extend %box-shadow;
+        border-radius  : 0;
+        height         : 69px;
+        display        : flex;
+        align-items    : flex-end;
+        justify-content: center;
+
+        h1 {
+            color      : $dark-grey;
+            padding    : 15px;
+            font-family: $fontHel;
+            font-size  : 16px;
+        }
+
+        a {
+            position: absolute;
+            top     : 35px;
+            left    : 20px;
+        }
+    }
+
+    section {
+        padding         : 0 20px;
+        height          : 50px;
+        left            : 0;
+        right           : 0;
+        background-color: $orange;
+        position        : fixed;
+        bottom          : 50px;
+        display         : flex;
+        justify-content : space-between;
+        align-items     : center;
+        color           : #fff;
+    
+        span {
+            font-size: 16px;
+        }
+    
+        .pulsante:last-of-type {
+            /*  width: 85px; */
+            height         : 30px;
+            border-radius  : 16px;
+            border         : solid 1px #fff;
+            display        : flex;
+            align-items    : center;
+            justify-content: space-between;
+            padding        : 0 20px;
+    
+            h3 {
+                font-size: 16px;
+            }
+        }
+    
+        h6 {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            p {
+                
+                margin-left: 5px;
+                font-size       : 12px;
+            }
+        }
+        h3{
+            font-size: 18px;
+        }
+    }
+}

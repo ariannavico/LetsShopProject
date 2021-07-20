@@ -1,0 +1,31 @@
+<div class="container">
+    <header>
+        <h1>Product</h1>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="icon-chevron-left"></a>
+    </header>
+    <section>
+        <app-card-product [active]="activeParam" [product]="SharedService.data[0]"></app-card-product>   
+    </section>
+    
+    <section>
+        <h1>Similar Product</h1>
+        <div *ngFor="let item of productsToShow">
+            <app-card-product  [product]="item"></app-card-product>   
+        </div>
+       
+    </section>
+    <footer *ngIf="SharedService.cart.length > 0">
+        <div class="d-flex justify-content-between align-items-center w-50">
+            <span class="icon-cart"></span>
+            <h6>{{SharedService.cart.length}}
+                <p>Items</p>
+            </h6>
+            <h3>€ {{SharedService. checkout}}</h3>
+        </div>
+    
+        <button [routerLink]="['/cart']" routerLinkActive="router-link-active" class="pulsante">
+            <h3>View Cart</h3>
+        </button>
+    </footer>
+</div>
+

@@ -1,0 +1,246 @@
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../src/assets/fonts/icomoon.eot?y33ghf');
+  src:  url('../src/assets/fonts/icomoon.eot?y33ghf#iefix') format('embedded-opentype'),
+    url('../src/assets/fonts/icomoon.ttf?y33ghf') format('truetype'),
+    url('../src/assets/fonts/icomoon.woff?y33ghf') format('woff'),
+    url('../src/assets/fonts/icomoon.svg?y33ghf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shield:before {
+  content: "\e90e";
+}
+.icon-toggle-off:before {
+  content: "\e914";
+}
+.icon-toggle-on:before {
+  content: "\e912";
+}
+.icon-chevron-right:before {
+  content: "\e90f";
+}
+.icon-chevron-left:before {
+  content: "\e910";
+}
+.icon-chevron-up:before {
+  content: "\e911";
+}
+.icon-chevron-down:before {
+  content: "\e90b";
+}
+.icon-credit-card:before {
+  content: "\e907";
+}
+.icon-equalizer:before {
+  content: "\e90d";
+}
+.icon-sliders:before {
+  content: "\e90d";
+}
+.icon-settings:before {
+  content: "\e90d";
+}
+.icon-preferences:before {
+  content: "\e90d";
+}
+.icon-dashboard:before {
+  content: "\e90d";
+}
+.icon-control:before {
+  content: "\e90d";
+}
+.icon-exit:before {
+  content: "\e90c";
+}
+.icon-location:before {
+  content: "\e908";
+}
+.icon-map-marker:before {
+  content: "\e908";
+}
+.icon-pin:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-time:before {
+  content: "\e909";
+}
+.icon-schedule:before {
+  content: "\e909";
+}
+.icon-bell:before {
+  content: "\e90a";
+}
+.icon-alarm:before {
+  content: "\e90a";
+}
+.icon-notification:before {
+  content: "\e90a";
+}
+.icon-dropbox:before {
+  content: "\e906";
+}
+.icon-plus:before {
+  content: "\e900";
+}
+.icon-add:before {
+  content: "\e900";
+}
+.icon-sum:before {
+  content: "\e900";
+}
+.icon-leaf:before {
+  content: "\e901";
+}
+.icon-nature:before {
+  content: "\e901";
+}
+.icon-plant:before {
+  content: "\e901";
+}
+.icon-tea:before {
+  content: "\e901";
+}
+.icon-green:before {
+  content: "\e901";
+}
+.icon-vegan:before {
+  content: "\e901";
+}
+.icon-vegetarian:before {
+  content: "\e901";
+}
+.icon-user:before {
+  content: "\e902";
+}
+.icon-profile:before {
+  content: "\e902";
+}
+.icon-avatar:before {
+  content: "\e902";
+}
+.icon-person:before {
+  content: "\e902";
+}
+.icon-member:before {
+  content: "\e902";
+}
+.icon-profile1:before {
+  content: "\e903";
+}
+.icon-file:before {
+  content: "\e903";
+}
+.icon-document:before {
+  content: "\e903";
+}
+.icon-page:before {
+  content: "\e903";
+}
+.icon-user1:before {
+  content: "\e903";
+}
+.icon-paper:before {
+  content: "\e903";
+}
+.icon-cart:before {
+  content: "\e904";
+}
+.icon-purchase:before {
+  content: "\e904";
+}
+.icon-ecommerce:before {
+  content: "\e904";
+}
+.icon-shopping:before {
+  content: "\e904";
+}
+.icon-search:before {
+  content: "\e905";
+}
+.icon-magnifier:before {
+  content: "\e905";
+}
+.icon-magnifying-glass:before {
+  content: "\e905";
+}
+.icon-inspect:before {
+  content: "\e905";
+}
+.icon-find:before {
+  content: "\e905";
+}
+
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+button{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+%box-shadow {
+  border-radius: 10px;
+  box-shadow   : #53535341 -1px 1px 5px;
+  color        : #53535365;
+}
+
+$gray      : #53535365;
+$grayM :  #535353a2;
+$dark-grey : #535353;
+$fontHel: Helvetica;
+
+.Title-section {
+  max-width: 100%;
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  font-family    : $fontHel;
+  h1 {
+      color        : $dark-grey;
+      font-size    : 16px;
+      margin-bottom: 15px;
+  }
+  p{
+    font-size: 12px;
+    color: $gray;
+  }
+  h3 {
+      font-size: 14px;
+      color    : #fba346;
+  }
+
+}

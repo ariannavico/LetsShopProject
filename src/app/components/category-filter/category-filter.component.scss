@@ -1,0 +1,18 @@
+
+div{
+    overflow-x: scroll;
+    
+    ul{
+        width: max-content;
+        li{
+            float: left;
+            button{
+                min-width: 85px;
+                height: 30px;
+                margin-right:  10px;
+                border-radius: 16px;
+                border: solid 1px #bbbbbb;
+            }
+        }
+    }
+}

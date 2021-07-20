@@ -1,0 +1,32 @@
+
+<div class="mb-5">
+    <router-outlet></router-outlet>
+</div>
+<footer>
+    <ul>
+        <li>
+            <button [routerLink]="['/']" routerLinkActive="router-link-active" >
+                <span class="icon-search"></span>
+                <p>Explore</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <span class="icon-file"></span>
+                <p>Orders</p>
+            </button>
+        </li>
+        <li>
+            <button [routerLink]="['/cart']" routerLinkActive="router-link-active" >
+                <span class="icon-cart"></span>
+                <p>Cart</p>
+            </button>
+        </li>
+        <li>
+            <button>
+                <span class="icon-profile"></span>
+                <p>Profile</p>
+            </button>
+        </li>
+    </ul>
+</footer>
